@@ -5,9 +5,11 @@ Welcome to the **Machine Learning** repository! This repo contains multiple proj
 ## Table of Contents
 
 - [Project Descriptions](#project-descriptions)
-  - [1. Life Expectancy Prediction](#1-life-expectancy-prediction)
-  - [2. Linear Regression Basics](#2-linear-regression-basics)
-  - [3. Netflix Content Clustering](#3-netflix-content-clustering)
+  - [1. Linear Regression Basics](#2-linear-regression-basics)
+  - [2. Heart Disease Prediction](#4-heart-disease-prediction)
+  - [3. Titanic Survival Prediction](#5-titanic-survival-prediction)
+  - [4. Life Expectancy Prediction](#1-life-expectancy-prediction)
+  - [5. Netflix Content Clustering](#3-netflix-content-clustering)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -20,20 +22,32 @@ Welcome to the **Machine Learning** repository! This repo contains multiple proj
 
 ## Project Descriptions
 
-### 1. Life Expectancy Prediction
-**Notebook:** `life-expectancy-prediction.ipynb`  
-This project explores a dataset related to global life expectancy. The goal is to build a predictive model to estimate life expectancy based on various health and socio-economic indicators.  
-- **Techniques Used:** Data cleaning, exploratory data analysis, feature engineering, regression models.
-- **Key Libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`.
-
-### 2. Linear Regression Basics
+### 1. Linear Regression Basics
 **Notebook:** `linear-regression-basics.ipynb`  
 A simple notebook focusing on the fundamentals of linear regression. This includes concepts such as:
 - **Ordinary Least Squares Regression**: Theory and implementation
 - **Evaluation Metrics**: MSE, RMSE, R²
 - **Visualization**: Plotting regression lines and residuals
 
-### 3. Netflix Content Clustering
+### 2. Heart Disease Prediction
+**Notebook:** `heart-disease-prediction.ipynb`  
+This project focuses on building a classification model to predict heart disease risk based on patient health metrics.  
+- **Techniques Used:** Logistic Regression, Decision Trees, Random Forest, Feature Engineering.
+- **Key Libraries:** `pandas`, `numpy`, `seaborn`, `scikit-learn`.
+
+### 3. Titanic Survival Prediction
+**Notebook:** `titanic-survival-prediction.ipynb`  
+A classic machine learning project based on the Titanic dataset from Kaggle. The goal is to predict whether a passenger survived or not using classification models.  
+- **Techniques Used:** Data preprocessing, feature engineering, logistic regression, decision trees, ensemble learning.
+- **Key Libraries:** `pandas`, `numpy`, `seaborn`, `matplotlib`, `scikit-learn`.
+
+### 4. Life Expectancy Prediction
+**Notebook:** `life-expectancy-prediction.ipynb`  
+This project explores a dataset related to global life expectancy. The goal is to build a predictive model to estimate life expectancy based on various health and socio-economic indicators.  
+- **Techniques Used:** Data cleaning, exploratory data analysis, feature engineering, regression models.
+- **Key Libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`.
+
+### 5. Netflix Content Clustering
 **Notebook:** `netflix-content-clustering.ipynb`  
 This project involves clustering Netflix titles based on various features such as genre, release year, and other metadata. It demonstrates:
 - **Data Preprocessing**: Handling missing data, encoding categorical features
@@ -115,6 +129,6 @@ This repository is available under the [MIT License](LICENSE). Feel free to use,
 For questions, suggestions, or collaborations, feel free to reach out:
 
 - **GitHub**: [hanyG175](https://github.com/hanyG175)
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **Email**: [hani.gaouaou.hg@gmail.com](hani.gaouaou.hg@gmail.com)
 
 Thank you for visiting this repository! We hope you find these projects useful and educational.
