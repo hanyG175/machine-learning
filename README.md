@@ -53,14 +53,13 @@ This project explores a dataset related to global life expectancy. The goal is t
 **Notebook:** `netflix-content-clustering.ipynb`  
 This project involves clustering Netflix titles based on various features such as genre, release year, and other metadata. It demonstrates:
 - **Data Preprocessing**: Handling missing data, encoding categorical features
-- **Clustering Algorithms**: K-Means, Hierarchical Clustering
-- **Dimensionality Reduction**: Using PCA or other techniques for visualization
+- **Clustering Algorithms**: K-Means
 
 ### 6. Plant Disease Detection using CNN
 **Notebook:** `Plant-Disease-Detection-CNN.ipynb`  
 This project demonstrates how to detect plant diseases using Convolutional Neural Networks (CNNs). It was developed using Google Colab.  
 - **Techniques Used:** Deep Learning, CNN architecture, Data Augmentation.
-- **Key Libraries:** `tensorflow`, `keras`, `opencv`, `numpy`.
+- **Key Libraries:** `tensorflow`, `keras`, `PIL`, `numpy`.
 
 ---
 
