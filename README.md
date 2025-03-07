@@ -10,6 +10,7 @@ Welcome to the **Machine Learning** repository! This repo contains multiple proj
   - [3. Titanic Survival Prediction](#5-titanic-survival-prediction)
   - [4. Life Expectancy Prediction](#1-life-expectancy-prediction)
   - [5. Netflix Content Clustering](#3-netflix-content-clustering)
+  - [6. Plant Disease Detection using CNN](#6-plant-disease-detection-using-cnn)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -53,6 +54,12 @@ This project involves clustering Netflix titles based on various features such a
 - **Data Preprocessing**: Handling missing data, encoding categorical features
 - **Clustering Algorithms**: K-Means, Hierarchical Clustering
 - **Dimensionality Reduction**: Using PCA or other techniques for visualization
+
+### 6. Plant Disease Detection using CNN
+**Notebook:** `Plant-Disease-Detection-CNN.ipynb`  
+This project demonstrates how to detect plant diseases using Convolutional Neural Networks (CNNs). It was developed using Google Colab.  
+- **Techniques Used:** Deep Learning, CNN architecture, Data Augmentation.
+- **Key Libraries:** `tensorflow`, `keras`, `opencv`, `numpy`.
 
 ---
 
