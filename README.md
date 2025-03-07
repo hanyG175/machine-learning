@@ -1,6 +1,7 @@
 # Machine Learning Projects
 
 Welcome to the **Machine Learning** repository! This repo contains multiple projects and Jupyter notebooks, each exploring different aspects of data science and machine learning. Feel free to explore, learn, and contribute.
+PS: Not all of them are optimized, they are mostly a part of my learning journey for I am trying to learn as much as I can from in different domains.
 
 ## Table of Contents
 
