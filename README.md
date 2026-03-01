@@ -8,83 +8,125 @@ A collection of machine learning projects spanning supervised learning, unsuperv
 
 ## Table of Contents
 
-- [Projects](#projects)
-  - [1. Linear Regression Basics](#1-linear-regression-basics)
-  - [2. Heart Disease Prediction](#2-heart-disease-prediction)
-  - [3. Titanic Survival Prediction](#3-titanic-survival-prediction)
-  - [4. Life Expectancy Prediction](#4-life-expectancy-prediction)
-  - [5. Netflix Content Clustering](#5-netflix-content-clustering)
-  - [6. Plant Disease Detection using CNN](#6-plant-disease-detection-using-cnn)
+- [Repository Structure](#repository-structure)
+- [Supervised Learning](#supervised-learning)
+  - [Regression](#regression)
+  - [Classification](#classification)
+- [Unsupervised Learning](#unsupervised-learning)
+  - [Clustering](#clustering)
 - [Getting Started](#getting-started)
 - [Contact](#contact)
 
 ---
 
-## Projects
+## Repository Structure
+
+```
+machine-learning/
+├── README.md (this file)
+├── supervised/
+│   ├── README.md
+│   ├── regression/
+│   │   ├── README.md
+│   │   ├── linear-regression-basics.ipynb
+│   │   └── life-expectancy-prediction.ipynb
+│   └── classification/
+│       ├── README.md
+│       ├── heart-disease-prediction.ipynb
+│       ├── titanic-survival-prediction.ipynb
+│       └── Plant-Disease-Detection-CNN.ipynb
+└── unsupervised/
+    ├── README.md
+    └── clustering/
+        ├── README.md
+        └── netflix-content-clustering.ipynb
+```
+
+---
+
+## Supervised Learning
+
+Supervised learning projects use labeled data to train predictive models. The models learn to map inputs to known outputs, enabling prediction on new, unseen data.
+
+See [supervised/README.md](supervised/README.md) for overview and structure.
+
+### Regression
+
+Projects predicting continuous numerical values. Techniques include Linear Regression, Ridge and Lasso regularization.
+
+See [supervised/regression/README.md](supervised/regression/README.md) for details on:
+- **Linear Regression Basics** — Closed-form OLS solutions and mathematical foundations
+- **Life Expectancy Prediction** — Multivariate regression with regularization on real-world data
+
+### Classification
+
+Projects predicting discrete class labels. Techniques range from Logistic Regression and ensemble methods to deep learning.
+
+See [supervised/classification/README.md](supervised/classification/README.md) for details on:
+- **Heart Disease Prediction** — Binary classification with classical statistical methods
+- **Titanic Survival Prediction** — Classification with careful feature engineering and ensemble methods
+- **Plant Disease Detection using CNN** — Image classification with Convolutional Neural Networks
+
+---
+
+## Unsupervised Learning
+
+Unsupervised learning projects discover hidden patterns in unlabeled data without explicit target variables.
+
+See [unsupervised/README.md](unsupervised/README.md) for overview and structure.
+
+### Clustering
+
+Projects discovering natural groupings in data through distance-based algorithms.
+
+See [unsupervised/clustering/README.md](unsupervised/clustering/README.md) for details on:
+- **Netflix Content Clustering** — K-Means clustering with silhouette validation
+
+---
+
+## Original Project Summaries
+
+For detailed mathematical foundations and methodology of each project, refer to the README files in each subfolder.
 
 ### 1. Linear Regression Basics
-**Notebook:** `linear-regression-basics.ipynb`
+**Location:** `supervised/regression/linear-regression-basics.ipynb`
 
-A rigorous treatment of linear regression grounded in the Ordinary Least Squares (OLS) framework. Rather than just fitting a `sklearn` model, this notebook derives the closed-form solution **β = (XᵀX)⁻¹Xᵀy** from first principles — including the geometric interpretation of projection onto the column space of X and the conditions under which (XᵀX) is invertible.
-
-Evaluation is handled through MSE, RMSE, and the coefficient of determination R² = 1 − SS_res/SS_tot, with particular attention to what R² actually measures and where it misleads. Residual plots are used to verify the Gauss-Markov assumptions (homoscedasticity, zero-mean errors, no autocorrelation).
+A rigorous treatment of linear regression grounded in the Ordinary Least Squares (OLS) framework. Derives the closed-form solution **β = (XᵀX)⁻¹Xᵀy** from first principles, including geometric interpretation and invertibility conditions. Emphasizes understanding through residual analysis and verification of Gauss-Markov assumptions.
 
 ---
 
 ### 2. Heart Disease Prediction
-**Notebook:** `heart-disease-prediction.ipynb`
+**Location:** `supervised/classification/heart-disease-prediction.ipynb`
 
-A binary classification pipeline built to predict cardiovascular disease risk from clinical indicators. The project compares Logistic Regression — where the decision boundary is defined by the log-odds **log(p/1−p) = Xβ** — against tree-based methods including Decision Trees and Random Forests.
-
-Feature engineering is driven by correlation analysis and domain knowledge. Model selection uses cross-validated AUC-ROC rather than raw accuracy, which matters significantly given the class imbalance typical of medical datasets. The ensemble approach via Random Forest is contextualized through its bias-variance decomposition: averaging over decorrelated trees reduces variance without increasing bias.
-
-**Key libraries:** `pandas`, `numpy`, `seaborn`, `scikit-learn`
+A binary classification pipeline predicting cardiovascular disease from clinical indicators. Compares Logistic Regression against Decision Trees and Random Forests. Uses AUC-ROC for model selection, addressing class imbalance typical in medical datasets.
 
 ---
 
 ### 3. Titanic Survival Prediction
-**Notebook:** `titanic-survival-prediction.ipynb`
+**Location:** `supervised/classification/titanic-survival-prediction.ipynb`
 
-The Titanic dataset is a canonical classification benchmark, and this notebook treats it as such — going beyond surface-level preprocessing to think carefully about which features carry genuine predictive signal versus noise. Missing data is handled through informed imputation strategies rather than naive mean-filling, and categorical encoding choices are justified rather than defaulted.
-
-Models are evaluated on their precision-recall tradeoff, with ensemble methods (bagging, boosting) applied and compared through the lens of the bias-variance tradeoff. The goal is not just a high-accuracy model, but an interpretable one — knowing *which* features drive survival probability and *why* matters as much as the final metric.
-
-**Key libraries:** `pandas`, `numpy`, `seaborn`, `matplotlib`, `scikit-learn`
+Classification using the Titanic dataset with emphasis on thoughtful feature engineering and data quality. Handles missing data through informed imputation and uses ensemble methods to balance bias-variance tradeoffs. Prioritizes model interpretability.
 
 ---
 
 ### 4. Life Expectancy Prediction
-**Notebook:** `life-expectancy-prediction.ipynb`
+**Location:** `supervised/regression/life-expectancy-prediction.ipynb`
 
-A multivariate regression problem using WHO health and socioeconomic indicators to predict national life expectancy. The analytical challenge here is not model complexity but data quality — the dataset requires careful handling of multicollinearity, missing values across heterogeneous features, and the distinction between confounders and true predictors.
-
-Exploratory analysis uses correlation matrices and partial plots to understand feature relationships before modelling. Regularization via Ridge (L2) and Lasso (L1) penalties is applied and compared, with the regularization parameter λ tuned through cross-validation. The Lasso solution's sparsity property is particularly relevant here for feature selection across a high-dimensional socioeconomic feature space.
-
-**Key libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
+A multivariate regression predicting national life expectancy from WHO indicators. Demonstrates handling of multicollinearity and missing values. Applies Ridge (L2) and Lasso (L1) regularization with cross-validated λ tuning, leveraging Lasso's sparsity for feature selection.
 
 ---
 
 ### 5. Netflix Content Clustering
-**Notebook:** `netflix-content-clustering.ipynb`
+**Location:** `unsupervised/clustering/netflix-content-clustering.ipynb`
 
-An unsupervised learning project that applies K-Means clustering to segment Netflix titles by content features including genre and release metadata. The notebook covers the full preprocessing pipeline — missing data imputation, categorical encoding, and feature scaling (critical for any distance-based algorithm) — before fitting the model.
-
-Cluster count k is selected through the elbow method on inertia (within-cluster sum of squared distances) and validated with the silhouette coefficient **s(i) = (b(i) − a(i)) / max(a(i), b(i))**, which measures how well each point fits its assigned cluster relative to the nearest alternative. Cluster profiles are then interpreted to extract meaningful content groupings.
-
-**Key libraries:** `pandas`, `numpy`, `scikit-learn`, `matplotlib`
+Unsupervised learning applying K-Means to segment Netflix content. Covers complete preprocessing (imputation, encoding, scaling) and cluster validation using inertia elbow method and silhouette coefficient **s(i) = (b(i) − a(i)) / max(a(i), b(i))**.
 
 ---
 
 ### 6. Plant Disease Detection using CNN
-**Notebook:** `Plant-Disease-Detection-CNN.ipynb`
+**Location:** `supervised/classification/Plant-Disease-Detection-CNN.ipynb`
 
-A deep learning project applying Convolutional Neural Networks to the problem of plant disease classification from leaf images. The architecture is built with an understanding of what CNNs actually compute: early convolutional layers learn low-frequency edge detectors (analogous to Gabor filters), while deeper layers compose these into class-discriminative feature maps.
-
-Data augmentation (random flips, rotations, zoom) is applied not as a heuristic but as a principled strategy to improve generalization by expanding the effective training distribution. Training dynamics are monitored through learning curves on both training and validation loss to detect overfitting early and adjust regularization accordingly.
-
-Developed and trained on Google Colab leveraging GPU acceleration.
-
-**Key libraries:** `tensorflow`, `keras`, `numpy`, `PIL`
+Deep learning project applying Convolutional Neural Networks to plant disease classification from leaf images. Demonstrates CNN architecture design with data augmentation and learning curve monitoring for overfitting detection. Trained on Google Colab with GPU acceleration.
 
 ---
 
