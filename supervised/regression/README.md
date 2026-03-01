@@ -32,5 +32,3 @@ Exploratory analysis uses correlation matrices and partial plots. Regularization
 2. Move to **Life Expectancy Prediction** to see regularization in action on real-world messy data
 
 ---
-
-**Difficulty Level:** Foundational → Intermediate

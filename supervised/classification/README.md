@@ -38,13 +38,3 @@ Developed and trained on Google Colab leveraging GPU acceleration.
 **Key Libraries:** `tensorflow`, `keras`, `numpy`, `PIL`
 
 ---
-
-## Learning Path
-
-1. Start with **Heart Disease Prediction** for classical statistical classification methods
-2. Move to **Titanic Survival Prediction** to deepen data preprocessing and ensemble techniques
-3. Advance to **Plant Disease Detection using CNN** for deep learning image classification
-
----
-
-**Difficulty Level:** Intermediate → Advanced

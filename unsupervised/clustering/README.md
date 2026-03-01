@@ -19,16 +19,6 @@ This metric measures how well each point fits its assigned cluster relative to t
 
 ---
 
-## Learning Path
-
-Start with **Netflix Content Clustering** to understand K-Means, the elbow method, and silhouette validation in the context of content-based recommendation systems.
-
----
-
-**Difficulty Level:** Foundational → Intermediate
-
----
-
 ## Key Metrics
 
 - **Inertia:** Sum of squared distances from each point to its assigned cluster center (lower is better, but used with elbow method)
